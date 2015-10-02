@@ -32,10 +32,10 @@ import com.App.users.dao.UserDaoImpl;
 @Configuration
 @ComponentScan({ "com.App.web.*" })
 @Import({ SecurityConfig.class })
-public class AppConfig {
+public class AppConfig  {
 
 
-    @Bean(name = "sessionFactory")
+    @Bean
     public SessionFactory sessionFactory() {
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource());
         builder
@@ -60,7 +60,7 @@ public class AppConfig {
 	    driverManagerDataSource.setPassword("admin");
 	    return driverManagerDataSource;
 	}
-	
+	/*
 	   @Autowired
 	    @Bean(name = "sessionFactory")
 	    public SessionFactory getSessionFactory(DataSource dataSource) {
@@ -68,9 +68,9 @@ public class AppConfig {
 	    	sessionBuilder.addProperties(getHibernateProperties());
 	    	sessionBuilder.addAnnotatedClasses(com.App.users.model.User.class);
 	    	return sessionBuilder.buildSessionFactory();
-	    }
+	    }*/
 	   
-	@Bean(name = "viewResolver")
+	@Bean
 	public InternalResourceViewResolver viewResolver() {
 	    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 	    viewResolver.setViewClass(JstlView.class);
@@ -78,10 +78,7 @@ public class AppConfig {
 	    viewResolver.setSuffix(".jsp");
 	    return viewResolver;
 	}
-	/*
-	 @Autowired
-	    @Bean(name = "userDao")
-	    public UserDao getUserDao(SessionFactory sessionFactory) {
-	    	return new UserDaoImpl(sessionFactory);
-	    }*/
+	 public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/webjars/");
+	    }
 }

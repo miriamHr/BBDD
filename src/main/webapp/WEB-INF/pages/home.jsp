@@ -4,8 +4,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-<link href="<c:url value="/assets/css/bootstrap-united.css" />" rel="stylesheet" type="text/css"/>
-<link href="<c:url value="/bootstrap/css/bootstrap.css" />" rel="stylesheet" type="text/css"/>
+<c:url value="/resources/assets/css/bootstrap-united.css" var ="style"/>
+<c:url value="/resources/bootstrap/css/bootstrap.css"  var="bootstrap"/>
+<link href="${style}" rel ="stylesheet">
+<link href="${bootstrap}" rel ="stylesheet">
+
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/code.js"></script>
 
@@ -57,6 +60,6 @@ body {
 		<div></div>
 	</div>
 
-
+<script type="text/javascript" src="webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@ import com.App.users.service.UserService;
 import com.App.users.dao.UserDao;
 
 
-//@Service
+@Service("userDetailsService")
 public class UserServiceImpl implements UserService {
 
 	@Autowired

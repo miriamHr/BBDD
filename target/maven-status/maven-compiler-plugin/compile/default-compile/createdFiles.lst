@@ -1,0 +1,15 @@
+com\App\config\SecurityConfig.class
+com\App\users\dao\AbstractDao.class
+com\App\users\service\UserService.class
+com\App\users\dao\UserDaoImpl$UserMapper.class
+com\App\users\model\User.class
+com\App\config\core\SpringSecurityInitializer.class
+com\App\users\service\UserServiceImpl.class
+com\App\users\dao\UserDaoImpl$1.class
+com\App\config\core\SpringMvcInitializer.class
+com\App\users\dao\UserDao.class
+com\App\users\dao\UserDaoImpl.class
+com\App\config\AppConfig.class
+com\App\exception\GlobalExceptionHandler.class
+com\App\web\controller\MainController.class
+com\App\users\model\UserRole.class
